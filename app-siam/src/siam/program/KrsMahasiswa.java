@@ -2,7 +2,7 @@ package siam.program;
 
 import java.util.Scanner;
 
-public class KRS {
+public class KrsMahasiswa {
 	Scanner baca = new Scanner(System.in);
 	String[][] db = new String[6][3];
 	String[][] Krs = new String[6][3];
