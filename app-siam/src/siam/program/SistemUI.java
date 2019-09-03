@@ -3,6 +3,7 @@ package siam.program;
 import java.util.Scanner;
 
 public class SistemUI {
+	static KRS krs = new KRS();
 	static String[] dataBase = new String[4];
 	static String[][] dataBASE = new String[6][3];
 	
