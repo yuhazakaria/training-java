@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.io.IOException;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		Scanner terminalInput = new Scanner(System.in);
 		String pilihanUser;
@@ -41,11 +41,27 @@ public class Main {
 		default:
 			System.err.println("\nIput anda tidak ditamukan\n silahkan pilih 1-5");
 		}
-		System.out.print("\nApakah anda ingin melajutkan (y/n) ? ");
-		pilihanUser = terminalInput.next();
-		isLanjutkan = pilihanUser.equalsIgnoreCase( anotherString: "y");
+		isLanjutkan = getYesorNo("Apakah anda ingin melanjutkan ?");
 	}
 	
+	}
+	
+	private static void tampilkanData() throws IOException{
+		
+	}
+	
+	private static boolean getYesorNo(String message) {
+		Scanner terminalInput = new Scanner(System.in);
+		System.out.print("\n" + message + "(y/n) ? ");
+		String pilihanUser = terminalInput.next();
+		
+		while (pilihanUser.equalsIgnoreCase( anotherString: "y") && pilihanUser.equalsIgnoreCase( anotherString: "n")) {
+			System.out.println("Pilihan anda bukan y atau n");
+			System.out.print("\n" + message + "(y/n) ? ");
+			pilihanUser = terminalInput.next();
+		}
+		return pilihanUser.equalsIgnoreCase( anotherString: "y");
+		
 	}
 	
 	private static void clearScreen() {
@@ -53,11 +69,11 @@ public class Main {
 			if (System.getProperty("os.name").contains("Windows")) {
 				new ProcessBuilder(..command:"cmd","/c","cls").inheritIO().start(),waitFor();
 			} else {
-				System.out.println("\833\143");
+				System.out.print("\833\143");
 			}
 			
 		} catch (Exception ex) {
-			System.out.println("tidak bisa clear screen");
+			System.err.println("tidak bisa clear screen");
 		}
 	}
 	
