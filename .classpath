@@ -3,5 +3,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="app-bank/src"/>
 	<classpathentry kind="src" path="app-siam/src"/>
+	<classpathentry kind="lib" path="K:/YZ/java/lib/apache-httpcomponents-httpclient.jar"/>
+	<classpathentry kind="lib" path="K:/YZ/java/lib/apache-httpcomponents-httpcore.jar"/>
+	<classpathentry kind="lib" path="K:/YZ/java/lib/json-20190722.jar"/>
 	<classpathentry kind="output" path="app-bank/bin"/>
 </classpath>
